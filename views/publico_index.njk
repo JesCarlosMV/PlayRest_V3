@@ -1,0 +1,22 @@
+{% extends "publico_base.njk" %}
+{% block titulo %} titulo {% endblock %}
+
+{% block contenido %}
+
+<form action="/buscar" method="get">
+    <label for="busqueda">Buscar</label>
+    <input type="text" name="busqueda" id="busqueda" class="form-control">
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+<h1>Listado de juegos</h1>
+<p>{{mensaje}}</p>
+<div>
+    <ul>
+        {% for juego in juegos %}
+        <li> <a href="/juegos/{{juego.id}}"> {{juego.nombre }} <a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

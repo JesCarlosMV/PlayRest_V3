@@ -1,0 +1,49 @@
+{% extends "admin_base.njk" %}
+{% block titulo %} admin_juegos_form {% endblock %}
+
+{% block contenido %}
+
+<!-- SE LE PASA : METODO, VALUE BOTON (añadir o modificar), COLOR DEL BOTON (success o danger)-->
+
+<!-- SE LE PASA : RESULTADO (si es modificar, se le pasa el resultado de la consulta) y se le envia el metodo , value boton y color del boton -->
+
+<form action="http://localhost:8080/admin/juegos/{{resultado.id}}" method="post" enctype="multipart/form-data" >
+    <input type="hidden" name="_method" value="{{metodo}}">
+    
+  <label for="POST-nombre">Nombre:
+    <input id="POST-nombre" type="text" name="nombre" value="{{resultado.nombre}}">
+  </label><br>
+
+  <label for="POST-descripcion">Descripcion:
+    <input id="POST-descripcion" type="text" name="descripcion" value="{{resultado.descripcion}}">
+  </label><br>
+
+  <label for="POST-edad">edad:
+    <input id="POST-edad" type="number" name="edad" value="{{resultado.edad}}">
+  </label><br>
+
+  <label for="POST-jugadores">jugadores:
+    <input id="POST-jugadores" type="number" name="jugadores" value="{{resultado.jugadores}}">
+  </label><br>
+
+  <label for="POST-tipo">tipo:
+    <input id="POST-tipo" type="text" name="tipo" value="{{resultado.jugadores}}">
+  </label><br>
+
+  <label for="POST-precio">precio:
+    <input id="POST-precio" type="number" name="precio" value="{{resultado.precio}}">
+  </label><br>
+
+  <label for="POST-imagen">imagen:
+    <input id="POST-imagen" type="file" class="form-control" name="imagen"/>
+  </label><br>
+
+  <label for="POST-edicion">edicion:
+    <input id="POST-edicion" type="text" name="edicion" value="{{resultado.edicion}}">
+  </label><br>
+
+
+  <input type="submit" value="{{boton}}" class="btn btn-{{color}}">
+</form>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+  </head>
+  <body>
+  <div class="container">
+    <form action="/auth/login" method="post" class="d-flex flex-column">
+      <label class="p-2" for="login">Login</label>
+      <input class="p-2" type="text" id="login" name="login" placeholder="Introduce usuario" />
+      <label class="p-2" for="password">Password</label>
+      <input class="p-2" type="password" id="password" name="password" placeholder="Introduce contraseña" />
+      <input class="btn btn-primary p-2" type="submit" value="Login">
+    </form>
+  </div>
+  <div class="container text-danger">
+    {{error}}
+  </div>
+  </body>
+</html>

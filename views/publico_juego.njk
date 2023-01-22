@@ -1,0 +1,16 @@
+{% extends "publico_base.njk" %}
+{% block titulo %} titulo {% endblock %}
+
+{% block contenido %}
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="/{{resultado.imagen}}" alt="{{resultado.imagen}}" width="30%">
+  <div class="card-body">
+    <h3 class="card-title"> {{resultado.nombre}}</h3>
+    <p class="card-text">{{resultado.descripcion}}</p>
+    <h6>Precio: {{resultado.precio}}€</h6>
+    <a href="#" class="btn btn-primary"> Go somewhere</a>
+  </div>
+</div>
+
+{% endblock %}

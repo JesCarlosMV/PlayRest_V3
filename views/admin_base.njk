@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title> {% block titulo %} {% endblock %}</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<body>
+
+    <!-- barra de navegacion comun para todos -->
+    <div class="container">
+        {% include 'admin_menu.njk' %}
+
+        <div>
+            <!--aqui va el contenido que envia cada njk a esta plantilla-->
+            {% block contenido %} {% endblock %}
+        </div>
+
+    </div>
+
+</body>
+
+</html>

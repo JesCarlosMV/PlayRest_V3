@@ -1,0 +1,25 @@
+{% extends "admin_base.njk" %}
+{% block titulo %} admin_juegos {% endblock %}
+
+{% block contenido %}
+
+{% for juego in juegos %}
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="/{{ juego.imagen }}" alt="{{ juego.imagen }}" width="30%">
+    <div class="card-body">
+        <h5 class="card-title">{{juego.nombre}}</h5>
+        <p class="card-text">{{juego.descripcion}}</p>
+        <div style="display:flex">
+            <form method="GET" action="http://localhost:8080/admin/juegos/editar/{{juego.id}}" enctype="application/x-www-form-urlencoded">
+                <button type="submit" class="btn btn-primary">Editar</button>
+            </form>
+            <form method="POST" action="http://localhost:8080/admin/juegos/{{juego.id}}" enctype="application/x-www-form-urlencoded">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn btn-danger">Borrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
