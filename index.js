@@ -15,7 +15,7 @@ const path = require('path');
 
 // conexion BBDD
 mongoose
-  .connect('mongodb://127.0.0.1:27017/playrest_v3', {
+  .connect('mongodb://mongodb:27017/playrest_v3', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
