@@ -49,3 +49,5 @@ juego1.save();
 juego2.save();
 juego3.save();
 juego4.save();
+
+console.log('Juegos agregados .. creo');

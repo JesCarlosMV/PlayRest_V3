@@ -22,4 +22,4 @@ let usu2 = new Usuario({
 usu2.save();
 
 //para eliminar la colección usuarios
-Usuario.collection.drop();
+//Usuario.collection.drop();
