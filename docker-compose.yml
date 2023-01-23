@@ -5,7 +5,7 @@ services:
     image: jescarlosmv/contactos-node
     ports:
       - 8080:8080
-    build: ./contactos2.3
+    build: ./PlayRest_V3
     restart: unless-stopped
     stdin_open: true
     tty: true
