@@ -4,5 +4,6 @@ CRUD con modelo vista - controlador + Docker
 
 ```
 Backend -> NodeJS
-Front -> JS
+Database -> MongoDB
+Front -> JS + ngk
 ```
